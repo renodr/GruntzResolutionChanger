@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gruntz Resolution Changer", "Gruntz Resolution Changer\Gruntz Resolution Changer.csproj", "{BC90E267-109F-4C87-B45B-511EF2D38880}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{BC90E267-109F-4C87-B45B-511EF2D38880}.Debug.ActiveCfg = Debug|.NET
+		{BC90E267-109F-4C87-B45B-511EF2D38880}.Debug.Build.0 = Debug|.NET
+		{BC90E267-109F-4C87-B45B-511EF2D38880}.Release.ActiveCfg = Release|.NET
+		{BC90E267-109F-4C87-B45B-511EF2D38880}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

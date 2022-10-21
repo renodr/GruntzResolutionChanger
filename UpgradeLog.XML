@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Gruntz Resolution Changer">
+</Property><Property Name="Solution File" Value="C:\Documents and Settings\Administrator\My Documents\Gruntz Resolution Changer\Gruntz Resolution Changer.sln">
+</Property><Property Name="User Options File" Value="C:\Documents and Settings\Administrator\My Documents\Gruntz Resolution Changer\Gruntz Resolution Changer.suo">
+</Property><Property Name="Date" Value="Monday, February 21, 2022">
+</Property><Property Name="Time" Value="14:34 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="Gruntz Resolution Changer.sln" Description="File successfully backed up as C:\Documents and Settings\Administrator\My Documents\Gruntz Resolution Changer\Backup\Gruntz Resolution Changer.sln">
+</Event><Event ErrorLevel="0" Project="" Source="Gruntz Resolution Changer.suo" Description="File successfully backed up as C:\Documents and Settings\Administrator\My Documents\Gruntz Resolution Changer\Backup\Gruntz Resolution Changer.suo">
+</Event><Event ErrorLevel="0" Project="Gruntz Resolution Changer" Source="Gruntz Resolution Changer\Gruntz Resolution Changer.csproj" Description="Project file successfully backed up as C:\Documents and Settings\Administrator\My Documents\Gruntz Resolution Changer\Backup\Gruntz Resolution Changer\Gruntz Resolution Changer.csproj">
+</Event><Event ErrorLevel="0" Project="Gruntz Resolution Changer" Source="Gruntz Resolution Changer\Gruntz Resolution Changer.csproj.user" Description="Project user file successfully backed up as C:\Documents and Settings\Administrator\My Documents\Gruntz Resolution Changer\Backup\Gruntz Resolution Changer\Gruntz Resolution Changer.csproj.user">
+</Event><Event ErrorLevel="0" Project="Gruntz Resolution Changer" Source="Gruntz Resolution Changer\AssemblyInfo.cs" Description="File successfully backed up as C:\Documents and Settings\Administrator\My Documents\Gruntz Resolution Changer\Backup\Gruntz Resolution Changer\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Gruntz Resolution Changer" Source="Gruntz Resolution Changer\GruntzResolutionChanger.cs" Description="File successfully backed up as C:\Documents and Settings\Administrator\My Documents\Gruntz Resolution Changer\Backup\Gruntz Resolution Changer\GruntzResolutionChanger.cs">
+</Event><Event ErrorLevel="0" Project="Gruntz Resolution Changer" Source="Gruntz Resolution Changer\App.ico" Description="File successfully backed up as C:\Documents and Settings\Administrator\My Documents\Gruntz Resolution Changer\Backup\Gruntz Resolution Changer\App.ico">
+</Event><Event ErrorLevel="0" Project="Gruntz Resolution Changer" Source="Gruntz Resolution Changer\GruntzResolutionChanger.resx" Description="File successfully backed up as C:\Documents and Settings\Administrator\My Documents\Gruntz Resolution Changer\Backup\Gruntz Resolution Changer\GruntzResolutionChanger.resx">
+</Event><Event ErrorLevel="0" Project="Gruntz Resolution Changer" Source="Gruntz Resolution Changer\Gruntz Resolution Changer.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Gruntz Resolution Changer" Source="Gruntz Resolution Changer\Gruntz Resolution Changer.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Gruntz Resolution Changer.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="Gruntz Resolution Changer.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Gruntz Resolution Changer" Source="Gruntz Resolution Changer\Gruntz Resolution Changer.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gruntz Resolution Changer", "Gruntz Resolution Changer\Gruntz Resolution Changer.csproj", "{BC90E267-109F-4C87-B45B-511EF2D38880}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Gruntz Resolution Changer Setup", "Gruntz Resolution Changer Setup\Gruntz Resolution Changer Setup.vdproj", "{D7241B08-CB6E-4827-8D06-BAA94B008B56}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC90E267-109F-4C87-B45B-511EF2D38880}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC90E267-109F-4C87-B45B-511EF2D38880}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC90E267-109F-4C87-B45B-511EF2D38880}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC90E267-109F-4C87-B45B-511EF2D38880}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7241B08-CB6E-4827-8D06-BAA94B008B56}.Debug|Any CPU.ActiveCfg = Debug
+		{D7241B08-CB6E-4827-8D06-BAA94B008B56}.Release|Any CPU.ActiveCfg = Release
+		{D7241B08-CB6E-4827-8D06-BAA94B008B56}.Release|Any CPU.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

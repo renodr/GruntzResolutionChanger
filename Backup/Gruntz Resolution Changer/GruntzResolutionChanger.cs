@@ -1,0 +1,320 @@
+using System;
+using System.Drawing;
+using System.Collections;
+using System.ComponentModel;
+using System.Windows.Forms;
+using System.Data;
+using Microsoft.Win32;
+
+namespace Gruntz_Resolution_Changer
+{
+	/// <summary>
+	/// Summary description for Form1.
+	/// </summary>
+	
+	public class Form1 : System.Windows.Forms.Form
+	{
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Button btnResolution1;
+		private System.Windows.Forms.Button btnResolution2;
+		private System.Windows.Forms.Button btnr;
+		private System.Windows.Forms.Label aboutInfo;
+		/// <summary>
+		/// Required designer variable.
+		/// </summary>
+		private System.ComponentModel.Container components = null;
+
+		public Form1()
+		{
+			//
+			// Required for Windows Form Designer support
+			//
+			InitializeComponent();
+
+			//
+			// TODO: Add any constructor code after InitializeComponent call
+			//
+		}
+
+		/// <summary>
+		/// Clean up any resources being used.
+		/// </summary>
+		protected override void Dispose( bool disposing )
+		{
+			if( disposing )
+			{
+				if (components != null) 
+				{
+					components.Dispose();
+				}
+			}
+			base.Dispose( disposing );
+		}
+
+		#region Windows Form Designer generated code
+		/// <summary>
+		/// Required method for Designer support - do not modify
+		/// the contents of this method with the code editor.
+		/// </summary>
+		private void InitializeComponent()
+		{
+			this.label1 = new System.Windows.Forms.Label();
+			this.btnResolution1 = new System.Windows.Forms.Button();
+			this.btnResolution2 = new System.Windows.Forms.Button();
+			this.btnr = new System.Windows.Forms.Button();
+			this.aboutInfo = new System.Windows.Forms.Label();
+			this.SuspendLayout();
+			// 
+			// label1
+			// 
+			this.label1.Location = new System.Drawing.Point(16, 8);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(264, 16);
+			this.label1.TabIndex = 0;
+			this.label1.Text = "Click a button to change the resolution";
+			// 
+			// btnResolution1
+			// 
+			this.btnResolution1.Location = new System.Drawing.Point(16, 40);
+			this.btnResolution1.Name = "btnResolution1";
+			this.btnResolution1.Size = new System.Drawing.Size(264, 56);
+			this.btnResolution1.TabIndex = 1;
+			this.btnResolution1.Text = "640x480";
+			this.btnResolution1.Click += new System.EventHandler(this.btnResolution1_Click);
+			// 
+			// btnResolution2
+			// 
+			this.btnResolution2.Location = new System.Drawing.Point(16, 104);
+			this.btnResolution2.Name = "btnResolution2";
+			this.btnResolution2.Size = new System.Drawing.Size(264, 56);
+			this.btnResolution2.TabIndex = 2;
+			this.btnResolution2.Text = "800x600";
+			// 
+			// btnr
+			// 
+			this.btnr.Location = new System.Drawing.Point(16, 168);
+			this.btnr.Name = "btnr";
+			this.btnr.Size = new System.Drawing.Size(264, 56);
+			this.btnr.TabIndex = 3;
+			this.btnr.Text = "1024x768";
+			// 
+			// aboutInfo
+			// 
+			this.aboutInfo.Location = new System.Drawing.Point(0, 240);
+			this.aboutInfo.Name = "aboutInfo";
+			this.aboutInfo.Size = new System.Drawing.Size(296, 24);
+			this.aboutInfo.TabIndex = 4;
+			this.aboutInfo.Text = "Created by Doug Reno - Copyright (C) 2022 All Rights Reserved";
+			// 
+			// Form1
+			// 
+			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+			this.ClientSize = new System.Drawing.Size(292, 273);
+			this.Controls.Add(this.aboutInfo);
+			this.Controls.Add(this.btnr);
+			this.Controls.Add(this.btnResolution2);
+			this.Controls.Add(this.btnResolution1);
+			this.Controls.Add(this.label1);
+			this.Name = "Form1";
+			this.Text = "Gruntz Resolution Changer";
+			this.ResumeLayout(false);
+
+		}
+		#endregion
+
+		/// <summary>
+		/// The main entry point for the application.
+		/// </summary>
+		[STAThread]
+		static void Main() 
+		{
+			Application.Run(new Form1());
+		}
+
+		// Get a registry key from the game folder
+		public static RegistryKey GetGameRegistryKey() 
+		{
+			// Windows 98 through Vista:
+			RegistryKey src = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Monolith Productions\\Gruntz\\1.0", false);
+
+			if (src == null)
+			{
+				// We're on a 64-bit system
+				src = Registry.LocalMachine.OpenSubKey("SOFTWARE\\WOW6432Node\\Mindscape\\LEGO Island", false);
+			}
+
+			return src;
+		}
+
+		public static string GetRegistryEntry(string key)
+		{
+			// Swapping namespaces now!
+			using (RegistryKey reg = GetGameRegistryKey())
+			{
+				if (reg != null) // Sanity check
+				{
+					object o = reg.GetValue(key);
+
+					if (o != null)
+					{
+						return o.ToString();
+					}
+				}
+			}
+
+			return null;
+		}
+
+		private void btnResolution1_Click(object sender, System.EventArgs e)
+		{
+			if ((SetResolutionTo640x480()) == false) 
+			{
+				MessageBox.Show("Error: An error occurred while attempting to set the screen resolution.", 
+								"Error", 
+								MessageBoxButtons.OK, 
+								MessageBoxIcon.Error);
+			} 
+			else 
+			{
+				MessageBox.Show("Changing the resolution to 640x480 was successful.", 
+								"Success!", 
+								MessageBoxButtons.OK, 
+								MessageBoxIcon.Information);
+			}
+		}
+
+		private void CopyRegistryKey(RegistryKey src, RegistryKey dst)
+		{
+			// Copy the values using a foreach() loop
+			foreach (string keyName in src.GetValueNames())
+			{
+				dst.SetValue(keyName, src.GetValue(keyName), src.GetValueKind(keyName));
+			}
+
+			// Copy each subkey now
+			foreach (string keyName in src.GetSubKeyNames())
+			{
+				using (string srcSubKey = src.OpenSubKey(keyName, false))
+				{
+					string dstSubKey = dst.CreateSubKey(name);
+					CopyRegistryKey(srcSubKey, dstSubKey);
+				}
+			}
+		}
+
+		public bool SetResolutionTo640x480() 
+		{
+			using (RegistryKey src = GetGameRegistryKey())
+			{
+				// First, see if we can get to the registry keys for Gruntz
+				if (src == null)
+				{
+					MessageBox.Show("Error: Unable to find the registry keys for Gruntz.", 
+									"Error",
+									MessageBoxButtons.OK,
+									MessageBoxIcon.Error);
+					return false;
+				}
+				
+				// Now, let's check and see if this has been done already. Sanity check time!
+				if (src.GetValue("Resolution").ToString() == "1")
+				{
+					MessageBox.Show("Error: The resolution is already set to 640x480.", 
+									"Error",
+									MessageBoxButtons.OK,
+									MessageBoxIcon.Error);
+					return false;
+				}
+
+				using (RegistryKey dst = Registry.CurrentUser.CreateSubKey("SOFTWARE\\Monolith Productions\\Gruntz\\1.0"))
+				{
+					// Copy the configuration data from HKLM to HKCU.
+					CopyRegistryKey(src, dst);
+
+					// Set the new values in *both* sides for now.
+					// TODO: Could be problematic in the future.
+					dst.SetValue("Resolution", 1);
+					src.SetValue("Resolution", 1);
+
+					return true;
+				}
+			}
+		}
+
+		public bool SetResolutionTo800x600() 
+		{
+			using (RegistryKey src = GetGameRegistryKey())
+			{
+				if (src == null)
+				{
+					MessageBox.Show("Error: Unable to find the registry keys for Gruntz.",
+									"Error",
+									MessageBoxButtons.OK,
+									MessageBoxIcon.Error);
+					return false;
+				}
+				
+				// Now, let's check and see if this has been done already. Sanity check time!
+				if (src.GetValue("Resolution").ToString() == "2") 
+				{
+					MessageBox.Show("Error: The resolution is already set to 800x600.", 
+									"Error",
+									MessageBoxButtons.OK,
+									MessageBoxIcon.Error);
+					return false;
+				}
+
+				using (RegistryKey dst = Registry.CurrentUser.CreateSubKey("SOFTWARE\\Monolith Productions\\Gruntz\\1.0"))
+				{
+					// Copy the configuration data from HKLM to HKCU.
+					CopyRegistryKey(src, dst);
+
+					// Set the new values in *both* sides for now.
+					// TODO: Could be problematic in the future.
+					dst.SetValue("Resolution", 2);
+					src.SetValue("Resolution", 2);
+
+					return true;
+				}
+			}
+		}
+
+		public bool SetResolutionTo1024x768() 
+		{
+			using (RegistryKey src = GetGameRegistryKey())
+			{
+				if (src == null)
+				{
+					MessageBox.Show("Error: Unable to find the registry keys for Gruntz.", 
+									"Error",
+									MessageBoxButtons.OK,
+									MessageBoxIcon.Error);
+					return false;
+				}
+				
+				// Now, let's check and see if this has been done already. Sanity check time!
+				if (src.GetValue("Resolution").ToString() == "3") 
+				{
+					MessageBox.Show("Error: The resolution is already set to 1024x768.",
+									"Error",
+									MessageBoxButtons.OK,
+									MessageBoxIcon.Error);
+					return false;
+				}
+
+				using (RegistryKey dst = Registry.CurrentUser.CreateSubKey("SOFTWARE\\Monolith Productions\\Gruntz\\1.0"))
+				{
+					// Copy the configuration data from HKLM to HKCU.
+					CopyRegistryKey(src, dst);
+
+					// Set the new values in *both* sides for now.
+					// TODO: Could be problematic in the future.
+					dst.SetValue("Resolution", 3);
+					src.SetValue("Resolution", 3);
+
+					return true;
+				}
+			}
+		}
+	}
+}

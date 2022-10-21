@@ -1,0 +1,17 @@
+C:\Documents and Settings\Administrator\My Documents\Gruntz Resolution Changer\Gruntz Resolution Changer\obj\Debug\Gruntz Resolution Changer.pdb
+C:\Documents and Settings\Administrator\My Documents\Gruntz Resolution Changer\Gruntz Resolution Changer\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\Gruntz Resolution Changer\Gruntz Resolution Changer\obj\Debug\Gruntz_Resolution_Changer.Form1.resources
+C:\Documents and Settings\Administrator\My Documents\Gruntz Resolution Changer\Gruntz Resolution Changer\obj\Debug\Gruntz Resolution Changer.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\My Documents\Gruntz Resolution Changer\Gruntz Resolution Changer\bin\Debug\Gruntz Resolution Changer.exe
+C:\Documents and Settings\Administrator\My Documents\Gruntz Resolution Changer\Gruntz Resolution Changer\bin\Debug\Gruntz Resolution Changer.pdb
+C:\Documents and Settings\Administrator\My Documents\Gruntz Resolution Changer\Gruntz Resolution Changer\obj\Debug\Gruntz Resolution Changer.exe
+C:\Documents and Settings\Administrator\My Documents\Gruntz Resolution Changer\Gruntz Resolution Changer\bin\Release\Gruntz Resolution Changer.exe
+C:\Documents and Settings\Administrator\My Documents\Gruntz Resolution Changer\Gruntz Resolution Changer\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\Gruntz Resolution Changer\Gruntz Resolution Changer\obj\Release\Gruntz_Resolution_Changer.Form1.resources
+C:\Documents and Settings\Administrator\My Documents\Gruntz Resolution Changer\Gruntz Resolution Changer\obj\Release\Gruntz Resolution Changer.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\My Documents\Gruntz Resolution Changer\Gruntz Resolution Changer\obj\Release\Gruntz Resolution Changer.exe
+C:\Documents and Settings\Administrator\My Documents\Gruntz Resolution Changer\Gruntz Resolution Changer\bin\Release\Gruntz Resolution Changer.exe.manifest
+C:\Documents and Settings\Administrator\My Documents\Gruntz Resolution Changer\Gruntz Resolution Changer\bin\Release\Gruntz Resolution Changer.application
+C:\Documents and Settings\Administrator\My Documents\Gruntz Resolution Changer\Gruntz Resolution Changer\obj\Release\Gruntz Resolution Changer.TrustInfo.xml
+C:\Documents and Settings\Administrator\My Documents\Gruntz Resolution Changer\Gruntz Resolution Changer\obj\Release\Gruntz Resolution Changer.exe.manifest
+C:\Documents and Settings\Administrator\My Documents\Gruntz Resolution Changer\Gruntz Resolution Changer\obj\Release\Gruntz Resolution Changer.application
